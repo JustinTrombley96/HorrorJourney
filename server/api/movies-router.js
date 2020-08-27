@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
 	const movie = req.body;
 	movies
-		.addmovie(movie)
+		.addMovie(movie)
 		.then(movie => {
 			console.log(movie);
 			res.status(200).json(movie);
