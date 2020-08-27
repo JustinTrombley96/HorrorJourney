@@ -21,7 +21,7 @@ server.use(cors())
 server.use("/users", UsersRouter)
 server.use("/movies", MoviesRouter)
 server.use("/mymovies", MyMoviesRouter)
-// server.use("/api/auth", AuthRouter)
+server.use("/auth", AuthRouter)
 
 // GET request to root / to make sure everything is working
 server.get("/", (req, res) => {
