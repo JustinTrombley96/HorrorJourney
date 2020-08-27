@@ -48,7 +48,7 @@ class SignUp extends React.Component {
 						required
 					/>
 			
-					<button type='submit'>Sign in</button>
+					<button type='submit'>Sign up</button>
 				</form>
 			</div>
 		);

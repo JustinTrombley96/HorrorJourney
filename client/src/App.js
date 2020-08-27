@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import PrivateRoute from './utils/PrivateRoute'
 
 import './App.css';
 
@@ -16,8 +17,8 @@ function App () {
 				<Switch>
 					<Route exact path='/' component={HomePage} />
 					<Route path='/join' component={SignInAndSignUp} />
-					<Route path='/library' component={Library} />
-					<Route path='/mymovies' component={MyMovies} />
+					<PrivateRoute path='/library' component={Library} />
+					<PrivateRoute path='/mymovies' component={MyMovies} />
 				</Switch>
 			</div>
 		</MovieProvider>
