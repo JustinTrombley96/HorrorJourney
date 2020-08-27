@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import FormInput from '../form-input/form-input.component';
 
@@ -9,20 +10,49 @@ class SignIn extends React.Component {
 		super(props);
 
 		this.state = {
-			email    : '',
-			password : '',
+			credentials : {
+				email    : '',
+				password : '',
+			},
+			error: ''
 		};
 	}
 
-	handleSubmit = event => {
-		event.preventDefault();
-		this.setState({ email: '', password: '' });
-	};
+	// handleSubmit = event => {
+	// 	event.preventDefault();
+	// 	this.setState({ email: '', password: '' });
+	// };
 
-	handleChange = event => {
-        const { value, name } = event.target;
-		this.setState({ [name]: value });
-	};
+	// handleChange = event => {
+	// 	const { value, name } = event.target;
+	// 	this.setState({ [name]: value });
+	// };
+
+	handleChange = e => {
+		this.setState({
+			credentials:{
+				...this.state.credentials,
+				[e.target.name]: e.target.value
+			}
+		})
+	}
+
+	handleSubmit = e => {
+		e.preventDefault()
+		axios.post('http://localhost:4000/auth/login', this.state.credentials)
+		.then(res => {
+			localStorage.setItem('token', res.data.key)
+			this.props.history.push('/library')
+		})
+		.catch(err => {
+			this.setState({
+				...this.state,
+				error: 'Incorrect email or password'
+			})
+			console.log(err)
+		})
+	}
+
 
 	render () {
 		return (
@@ -32,20 +62,20 @@ class SignIn extends React.Component {
 					<FormInput
 						name='email'
 						type='email'
-						handleChange={this.handleChange}
-						value={this.state.email}
+						onChange={this.handleChange}
+						value={this.state.credentials.email}
 						label='Email'
 						required
 					/>
 					<FormInput
 						name='password'
 						type='password'
-						handleChange={this.handleChange}
-						value={this.state.password}
+						onChange={this.handleChange}
+						value={this.state.credentials.password}
 						label='Password'
 						required
 					/>
-                    <button type="submit">Sign in</button>
+					<button type='submit'>Sign in</button>
 				</form>
 			</div>
 		);
