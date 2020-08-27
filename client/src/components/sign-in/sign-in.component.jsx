@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router-dom'
+
 
 import FormInput from '../form-input/form-input.component';
 
@@ -82,4 +84,4 @@ class SignIn extends React.Component {
 	}
 }
 
-export default SignIn;
+export default withRouter(SignIn);
