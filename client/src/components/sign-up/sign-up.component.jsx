@@ -11,7 +11,6 @@ class SignUp extends React.Component {
 		this.state = {
 			email    : '',
 			password : '',
-			name     : '',
 		};
 	}
 
@@ -48,14 +47,7 @@ class SignUp extends React.Component {
 						label='Password'
 						required
 					/>
-					<FormInput
-						name='name'
-						type='name'
-						handleChange={this.handleChange}
-						value={this.state.name}
-						label='Name'
-						required
-					/>
+			
 					<button type='submit'>Sign in</button>
 				</form>
 			</div>
