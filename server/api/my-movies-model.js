@@ -23,10 +23,13 @@ function addMyMovie(myMovie) {
 }
 
 
-function updateMyMovie(id, myMovie){
+function updateMyMovie(id, changes){
     return db('mymovies')
-    .where('id', Number(id))
-    .update(mymovie)
+    .where({id})
+    .update(changes, "*")
+    .then(() => {
+        return findMyMovieById(id)
+    })
 }
 
 function deleteMyMovie(id){

@@ -4,7 +4,7 @@ const helmet = require("helmet")
 const cors = require("cors")
 
 // import routers
-const UsersRouter = require("./api/users-router.js")
+const UsersRouter = require("./auth/auth-router.js")
 const MoviesRouter = require("./api/movies-router.js")
 const MyMoviesRouter = require("./api/my-movies-router.js")
 const AuthRouter = require("./auth/auth-router.js")
