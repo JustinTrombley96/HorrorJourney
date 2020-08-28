@@ -13,7 +13,7 @@ export const MyMovieProvider = props => {
 		axios.get("http://localhost:4000/mymovies")
 		.then(res => setMyMovies(res.data))
 		.catch(err => console.log(err))
-	})
+	}, [])
 
 	return (
 		<div>

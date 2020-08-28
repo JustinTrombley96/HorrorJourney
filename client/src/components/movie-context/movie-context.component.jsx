@@ -36,7 +36,7 @@ export const MovieProvider = (props) => {
         
         .then(res => setMovies(res.data))
         .catch(err => console.log(err))
-    })
+    }, [])
 
     return (
         <div>

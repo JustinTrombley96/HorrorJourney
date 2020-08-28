@@ -4,9 +4,6 @@ exports.seed = function(knex) {
   return knex('mymovies').del()
     .then(function () {
       // Inserts seed entries
-      return knex('mymovies').insert([
-        {title: 'Scream Kings', rating: 4}
-        
-      ]);
+      return knex('mymovies').insert([]);
     });
 };
