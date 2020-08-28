@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Welcome from '../../components/welcome/welcome.component';
-
-import './homepage.styles.scss';
+import Welcome from '../components/welcome.component';
 
 const HomePage = () => (
 	<div className='homepage'>

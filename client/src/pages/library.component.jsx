@@ -1,6 +1,6 @@
 import React from 'react';
-import Movies from '../../components/movies/movies.component';
-import './library.styles.scss';
+import Movies from '../components/movies.component';
+import './pages-styles/library.styles.scss';
 import { Link } from 'react-router-dom';
 
 const Library = () => (

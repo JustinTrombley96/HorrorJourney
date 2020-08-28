@@ -1,6 +1,6 @@
 import React from 'react';
-import MyMovies from '../../components/my-movies/my-movies.component.jsx';
-import './my-movies.styles.scss';
+import MyMovies from '../components/my-movies.component.jsx';
+import './pages-styles/my-movies.styles.scss';
 import { Link } from 'react-router-dom';
 
 

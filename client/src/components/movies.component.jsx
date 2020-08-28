@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import Movie from '../movie/movie.component';
-import { MovieContext } from '../movie-context/movie-context.component';
-import {MyMovieContext} from '../my-movie-context/my-movie-context'
-import './movies.styles.scss';
+import Movie from './movie.component';
+import { MovieContext } from './contexts/movie-context.component';
+import {MyMovieContext} from './contexts/my-movie-context'
+import './component-styles/movies.styles.scss';
 
 const Movies = () => {
 	const [

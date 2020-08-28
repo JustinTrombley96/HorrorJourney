@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import FormInput from '../form-input/form-input.component';
 import {withRouter} from 'react-router-dom'
 
-import './sign-up.styles.scss';
 
+import FormInput from './form-input.component';
 
-class SignUp extends React.Component {
+import './component-styles/sign-in-styles.scss';
+
+class SignIn extends React.Component {
 	constructor (props) {
 		super(props);
 
@@ -15,20 +16,8 @@ class SignUp extends React.Component {
 				email    : '',
 				password : '',
 			},
+			error: ''
 		};
-	}
-
-	addUser = e => {
-		e.preventDefault()
-		axios.post('http://localhost:4000/auth/register', this.state.credentials)
-		.then(res => {
-			localStorage.setItem('token', res.data.key)
-			this.props.history.push('/library')
-			
-		})
-		.catch(err => {
-			console.log(err)
-		})
 	}
 
 	handleChange = e => {
@@ -40,11 +29,28 @@ class SignUp extends React.Component {
 		})
 	}
 
+	handleSubmit = e => {
+		e.preventDefault()
+		axios.post('http://localhost:4000/auth/login', this.state.credentials)
+		.then(res => {
+			localStorage.setItem('token', res.data.key)
+			this.props.history.push('/library')
+		})
+		.catch(err => {
+			this.setState({
+				...this.state,
+				error: 'Incorrect email or password'
+			})
+			console.log(err)
+		})
+	}
+
+
 	render () {
 		return (
-			<div className='sign-up'>
-				<h1>Sign Up</h1>
-				<form onSubmit={this.addUser}>
+			<div className='sign-in'>
+				<h1>Sign In</h1>
+				<form onSubmit={this.handleSubmit}>
 					<FormInput
 						name='email'
 						type='email'
@@ -61,12 +67,11 @@ class SignUp extends React.Component {
 						label='Password'
 						required
 					/>
-
-					<button className= 'sign-up-button' type='submit'>Sign up</button>
+					<button className='sign-in-button' type='submit'>Sign in</button>
 				</form>
 			</div>
 		);
 	}
 }
 
-export default withRouter(SignUp);
+export default withRouter(SignIn);

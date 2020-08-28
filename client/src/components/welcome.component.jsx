@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HorrorClub from '../../images/HorrorClub.jpg'
+import HorrorClub from '../HorrorClub.jpg'
 
-import './welcome.styles.scss';
+import './component-styles/welcome.styles.scss';
 
 const Welcome = () => (
 	<div className='welcome'>

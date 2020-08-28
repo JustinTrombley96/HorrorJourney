@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-import MyMovie from '../my-movie/my-movie.component';
-import { MyMovieContext } from '../my-movie-context/my-movie-context';
-import './my-movies-styles.scss';
+import MyMovie from './my-movie.component';
+import { MyMovieContext } from './contexts/my-movie-context';
+import './component-styles/my-movies-styles.scss';
 import axios from 'axios'
 
 const MyMovies = () => {

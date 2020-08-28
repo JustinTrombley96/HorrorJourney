@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './my-movie.styles.scss'
+import './component-styles/my-movie.styles.scss'
 import axios from 'axios'
 
 

@@ -1,5 +1,5 @@
 import React, {  useState} from 'react';
-import './movie.styles.scss';
+import './component-styles/movie.styles.scss';
 import axios from 'axios'
 
 const Movie = ({ title, image, setMyMovies }) => {
