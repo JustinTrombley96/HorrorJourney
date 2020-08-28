@@ -15,7 +15,6 @@ const removeMovie = () => {
 	}
 
 const updateRating = () => {
-	console.log("update")
 	axios.put(`http://localhost:4000/mymovies/${id}`, {rating: rate})
 	.then( () => axios.get("http://localhost:4000/mymovies").then(res => setMyMovies(res.data)))
 	.catch(err => console.log(err))
