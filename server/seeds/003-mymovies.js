@@ -5,9 +5,8 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('mymovies').insert([
-        {title: 'Scream 1', rating: 5},
-        {title: 'Scream 2', rating: 4},
-        {title: 'Scream 3', rating: 3}
+        {title: 'Scream Kings', rating: 4}
+        
       ]);
     });
 };

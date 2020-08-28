@@ -1,0 +1,21 @@
+.my-movie {
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: black;
+    max-width: 20rem;
+    min-width: 15rem;
+    flex-direction: column;
+    margin: 2rem;
+    .cover-photo {
+        width: 75%;
+    }
+    .delete{
+        width: 50%;
+        height: 3rem;
+    }
+    .edit{
+        width: 50%;
+        height: 3rem;
+    }
+}

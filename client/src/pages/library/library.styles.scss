@@ -1,8 +1,15 @@
-.library {
-    width: 70%;
-    margin: 0 auto;
-	.title {
-        margin-bottom: 50px;
-        position: relative;
-	}
+.container {
+    display: flex;
+    .library {
+        width: 75%;
+        margin: 0 auto;
+        .title {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .to-my-library {
+            font-size: 5rem;
+            color: white;
+        }
+    }
 }

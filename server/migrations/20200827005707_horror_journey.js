@@ -9,11 +9,14 @@ exports.up = function(knex) {
         .createTable('movies', tbl => {
             tbl.increments()
             tbl.string('title').notNullable().unique()
+            tbl.string('image').notNullable().unique()
+            tbl.integer('rating')
         })
         .createTable('mymovies', tbl => {
             tbl.increments()
             tbl.string('title').notNullable().unique()
-            tbl.integer('rating').notNullable()
+            tbl.string('image')
+            tbl.integer('rating')
         })
 
         // Add a limit on the Rating to only work from 1 - 5

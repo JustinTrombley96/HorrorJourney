@@ -2,4 +2,17 @@
     width:40%;
     margin-right: 10%;
     text-align: left;
+
+    .sign-up-button {
+        background-color: #f44336; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
 }

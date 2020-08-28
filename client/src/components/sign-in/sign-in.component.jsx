@@ -67,7 +67,7 @@ class SignIn extends React.Component {
 						label='Password'
 						required
 					/>
-					<button type='submit'>Sign in</button>
+					<button className='sign-in-button' type='submit'>Sign in</button>
 				</form>
 			</div>
 		);

@@ -18,7 +18,6 @@ const Movie = ({ title, image }) => {
 		setRating(event.target.value);
 	};
 
-	console.log('My Movies inside of Movie Component', myMovies);
 	return (
 		<div className='movie'>
 			<h1>{title}</h1>
