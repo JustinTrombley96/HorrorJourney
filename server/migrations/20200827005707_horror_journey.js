@@ -8,13 +8,13 @@ exports.up = function(knex) {
         })
         .createTable('movies', tbl => {
             tbl.increments()
-            tbl.string('title').notNullable().unique()
-            tbl.string('image').notNullable().unique()
+            tbl.string('title').notNullable()
+            tbl.string('image').notNullable()
             tbl.integer('rating')
         })
         .createTable('mymovies', tbl => {
             tbl.increments()
-            tbl.string('title').notNullable().unique()
+            tbl.string('title').notNullable()
             tbl.string('image')
             tbl.integer('rating')
         })

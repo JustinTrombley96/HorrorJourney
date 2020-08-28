@@ -11,7 +11,7 @@ const Welcome = () => (
 		<Link className='join' to='/join'>
 			JOIN
 		</Link>
-		<img className='logo' src={HorrorClub} />
+		<img className='logo' src={HorrorClub} alt={"HorrorClub"} />
 	</div>
 );
 
