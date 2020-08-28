@@ -9,15 +9,18 @@ export const MovieProvider = (props) => {
     const [movies, setMovies] = useState([
         {
             title: "Scream",
-            image: Scream
+            image: Scream,
+            rating: 0
         },
         {
             title: "The Shining",
-            image: Shining
+            image: Shining,
+            rating: 0
         },
         {
             title: "Hostel",
-            image: Hostel
+            image: Hostel,
+            rating: 0
         }
     ])
 

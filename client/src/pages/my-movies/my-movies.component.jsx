@@ -1,13 +1,12 @@
 import React from 'react';
-
-// import Welcome from '../../components/welcome/welcome.component';
-
+import MyMovies from '../../components/my-movies/my-movies.component.jsx';
 import './my-movies.styles.scss';
 
-const MyMovies = () => (
+const MyMoviesPage = () => (
 	<div className='my-movies'>
 		<h1>List of My Movies</h1>
+		<MyMovies />
 	</div>
 );
 
-export default MyMovies;
+export default MyMoviesPage;

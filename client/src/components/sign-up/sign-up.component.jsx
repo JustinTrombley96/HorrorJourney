@@ -18,19 +18,6 @@ class SignUp extends React.Component {
 		};
 	}
 
-	
-	// handleSubmit = event => {
-	// 	event.preventDefault();
-
-	// 	this.setState({ email: '', password: '', name: '' });
-	// };
-
-	// handleChange = event => {
-	// 	const { value, name } = event.target;
-
-	// 	this.setState({ [name]: value });
-	// };
-
 	addUser = e => {
 		e.preventDefault()
 		axios.post('http://localhost:4000/auth/register', this.state.credentials)
