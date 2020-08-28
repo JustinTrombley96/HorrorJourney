@@ -1,6 +1,9 @@
 import React from 'react';
 
 const MyMovie = ({ title, rating, image }) => {
+
+	
+
 	return (
 		<div className='my-movie'>
 			{console.log(title)} <h1>{title}</h1>

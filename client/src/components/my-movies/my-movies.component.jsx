@@ -9,15 +9,6 @@ const MyMovies = () => {
 		setMyMovies,
 	] = useContext(MyMovieContext);
 
-	// 	return (
-	// 		<div className='my-movies'>
-	// 			{myMovies.map(( title, image, rating, i) => (
-	// 				<MyMovie title={title} image={image} rating={rating} key={i} />
-	// 			))}
-	// 		</div>
-	// 	);
-	// };
-
 	return (
 		<div className='my-movies'>
 			{myMovies.map(myMovie => (
